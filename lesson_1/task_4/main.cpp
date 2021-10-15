@@ -1,5 +1,6 @@
 #include <iostream>
 #include <cmath>
+#include <complex>
 
 using namespace std;
 
@@ -27,7 +28,7 @@ int main()
         double xr, xi;
         xr = (-b/(2*a));
         xi = abs(sqrt(abs(D))/(2*a));
-        printf("x1 = %f + %fi\n", xr, xi);
-        printf("x2 = %f - %fi", xr, xi);
+        cout << "x1 = " << xr " + " << xi << "i" << endl;
+        cout << "x1 = " << xr " - " << xi << "i" << endl;
     }
 }

@@ -1,47 +1,47 @@
 #include <iostream>
-#include <cmath>
 
 using namespace std;
 
-int main()
-{
-    int msk, num, cl, code[8] {0, 0, 0, 0, 0, 0, 0, 0};
-    bool m = 0;
+int main() {
+    int msk, num;
+    bool rep = 0;
     cout << "netmask: 255.255.255.*" << endl;
-    while (!m) {
-        m = 1;
+    while (rep != 1) {
+        rep = 1;
         cout << "enter *: ";
         cin >> msk;
-        if (msk >= 0 && msk <= 255) {
-            cl = 0;
-            for (int i = 7, msk2 = msk; i >= 0; i--) {
-                code[i] = msk2%2;
-                msk2 /= 2;
-                if (code[i] == 0) cl++;
-            }
-            for (int i = 0; i < 7; i++)
-                if (code[i] < code[i+1]) {
-                    m = 0;
-                    break;
-                }
-            if (m != 0) {
-                /*cout << "\t* = " << msk << endl; //
-                for (int i = 0; i < 8; i++) cout << code[i] << " ";
-                cout << endl;
-                cout << "\tNetmask" << endl;
-                cout << "11111111:11111111:11111111:";
-                for (int i = 0; i < 8; i++) cout << code[i];
-                cout << endl;*/
-                if (msk == 255) num = 1;
-                else if (msk == 254) num = 2;
-                else num = pow(2, cl) - 2;
-                cout << "number of hosts: " << num;
-            }
-            else cout << "wrong value, try again" << endl;
-        }
-        else {
-            cout << "wrong value, try again" << endl;
-            m = 0;
+        switch (msk) {
+            case 255:
+                num = 1;
+                break;
+            case 254:
+                num = 2;
+                break;
+            case 252:
+                num = 2;
+                break;
+            case 248:
+                num = 6;
+                break;
+            case 240:
+                num = 14;
+                break;
+            case 224:
+                num = 30;
+                break;
+            case 192:
+                num = 62;
+                break;
+            case 128:
+                num = 126;
+                break;
+            case 0:
+                num = 254;
+                break;
+            default:
+                cout << "wrong number, try again." << endl;
+                rep = 0;
         }
     }
+    cout << "number of hosts: " << num;
 }
