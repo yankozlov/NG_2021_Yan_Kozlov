@@ -21,22 +21,22 @@ int main() {
                 num = 2;
                 break;
             case 248:
-                num = 6;
+                num = 8;
                 break;
             case 240:
-                num = 14;
+                num = 16;
                 break;
             case 224:
-                num = 30;
+                num = 32;
                 break;
             case 192:
-                num = 62;
+                num = 64;
                 break;
             case 128:
-                num = 126;
+                num = 128;
                 break;
             case 0:
-                num = 254;
+                num = 256;
                 break;
             default:
                 cout << "wrong number, try again." << endl;
