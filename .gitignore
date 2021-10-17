@@ -1,4 +1,9 @@
 # Prerequisites
+/bin*
+/obj*
+*.layout
+*.cbp
+*.depend
 *.d
 
 # Compiled Object files
