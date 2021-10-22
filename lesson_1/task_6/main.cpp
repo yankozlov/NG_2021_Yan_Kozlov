@@ -11,18 +11,21 @@ int main() {
         cout << "enter *: ";
         cin >> mask;
         switch (mask) {
-            case 255: cout << "number of hosts: " << 1; break;
-            case 254: cout << "number of hosts: " << 2; break;
-            case 252: cout << "number of hosts: " << 4; break;
-            case 248: cout << "number of hosts: " << 8; break;
-            case 240: cout << "number of hosts: " << 16; break;
-            case 224: cout << "number of hosts: " << 32; break;
-            case 192: cout << "number of hosts: " << 64; break;
-            case 128: cout << "number of hosts: " << 128; break;
-            case 0: cout << "number of hosts: " << 256; break;
+            case 255: break;
+            case 254: break;
+            case 252: break;
+            case 248: break;
+            case 240: break;
+            case 224: break;
+            case 192: break;
+            case 128: break;
+            case 0: break;
             default:
                 cout << "wrong number, try again." << endl;
                 rep = 1;
         }
     }
+    cout << "number of hosts: ";
+    if (mask < 3) cout << 256-mask;
+    else cout << 256-mask-2;
 }

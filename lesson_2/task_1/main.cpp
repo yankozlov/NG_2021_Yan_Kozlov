@@ -4,13 +4,12 @@ using namespace std;
 
 int main()
 {
-    int num;
-    int res = 0;
+    int num, sum = 0;
     cout << "enter the number: ";
     cin >> num;
     while (num != 0) {
-        res += num%10;
+        sum += num%10;
         num /= 10;
     }
-    cout << "res: " << res;
+    cout << "Sum of all numbers: " << sum;
 }

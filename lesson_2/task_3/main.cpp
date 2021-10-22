@@ -9,11 +9,8 @@ int main()
     cin >> sizeOfSquare;
     for (int i = 0; i < sizeOfSquare; i++) {
         for (int j = 0; j < sizeOfSquare; j++) {
-            if (i != 0 && i != sizeOfSquare-1)
-                if (j != 0 && j != sizeOfSquare-1)
-                    cout << " ";
-                else
-                    cout << "*";
+            if (i != 0 && i != sizeOfSquare-1 && j != 0 && j != sizeOfSquare-1)
+                cout << " ";
             else
                 cout << "*";
         }
