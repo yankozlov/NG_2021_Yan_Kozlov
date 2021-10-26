@@ -10,22 +10,21 @@ int main() {
         rep = 0;
         cout << "enter *: ";
         cin >> mask;
+	cout << "number of hosts: ";
         switch (mask) {
-            case 255: break;
-            case 254: break;
-            case 252: break;
-            case 248: break;
-            case 240: break;
-            case 224: break;
-            case 192: break;
-            case 128: break;
-            case 0: break;
+            case 255: cout << "1" << endl; break;
+            case 254: cout << "2" << endl; break;
+            case 252: cout << "2" << endl; break;
+            case 248: cout << "6" << endl; break;
+            case 240: cout << "14" << endl; break;
+            case 224: cout << "30" << endl; break;
+            case 192: cout << "62" << endl; break;
+            case 128: cout << "126" << endl; break;
+            case 0: cout << "254" << endl; break;
             default:
+		cout << "undefined." << endl;
                 cout << "wrong number, try again." << endl;
                 rep = 1;
         }
     }
-    cout << "number of hosts: ";
-    if (mask < 3) cout << 256-mask;
-    else cout << 256-mask-2;
 }
