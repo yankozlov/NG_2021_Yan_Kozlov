@@ -3,12 +3,11 @@
 using namespace std;
 
 int main() {
-    int mask;
-    bool rep = 1;
     cout << "netmask: 255.255.255.*" << endl;
-    while (rep != 0) {
-        rep = 0;
+    do {
+        bool rep = 0;
         cout << "enter *: ";
+        int mask = 0;
         cin >> mask;
 	cout << "number of hosts: ";
         switch (mask) {
@@ -22,9 +21,9 @@ int main() {
             case 128: cout << "126" << endl; break;
             case 0: cout << "254" << endl; break;
             default:
-		cout << "undefined." << endl;
+    	        cout << "undefined." << endl;
                 cout << "wrong number, try again." << endl;
                 rep = 1;
-        }
-    }
+        } 
+    } while (rep == 1);
 }

@@ -4,9 +4,8 @@ using namespace std;
 
 int main()
 {
-    int mass, fuel;
+    int mass = 0;
     cout << "enter ZAZ spaceship's mass, kg: ";
     cin >> mass;
-    fuel = (float(mass/3)-2)*300;
-    cout << "fuel needed: " << fuel << " kg.";
+    cout << "fuel needed: " << (float(mass/3)-2)*300 << " kg.";
 }
